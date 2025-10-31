@@ -1,0 +1,22 @@
+# flyctl launch added from .gitignore
+# Rust
+**/target
+**/Cargo.lock
+
+# Données
+**/*.tsv
+**/*.csv
+
+# Fly.io
+**/.fly
+
+# IDE
+**/.vscode
+**/.idea
+**/*.swp
+**/*.swo
+
+# OS
+**/.DS_Store
+**/Thumbs.db
+fly.toml

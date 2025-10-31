@@ -69,30 +69,6 @@ wget http://www.lexique.org/databases/Lexique383/Lexique383.tsv
 cargo run --release
 ```
 
-## 🚀 Déploiement sur Fly.io
-```bash
-# Installer flyctl
-curl -L https://fly.io/install.sh | sh
-
-# Se connecter
-flyctl auth login
-
-# Déployer
-flyctl launch
-flyctl deploy
-
-# Tester
-curl https://lexique3-api.fly.dev/health
-```
-
-## 📊 Performances
-
-- **Démarrage**: 1-3 sec
-- **RAM**: 150-250 MB (Lexique3 complet)
-- **Latence**: < 1 ms par requête
-
-## 📝 Licence
-
 Les données Lexique3 sont sous licence CC-BY-SA.
 
 **Citation:**
