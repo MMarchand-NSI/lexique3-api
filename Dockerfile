@@ -16,5 +16,7 @@ RUN cargo build --release --bin lexique3-api
 # We do not need the Rust toolchain to run the binary!
 FROM debian:bookworm-slim AS runtime
 WORKDIR /app
-COPY --from=builder /app/target/release/lexique3-api /usr/local/bin
-ENTRYPOINT ["/usr/local/bin/lexique3-api"]
+COPY --from=builder /app/target/release/lexique3-api /app/lexique3-api
+COPY Lexique383.tsv /app/Lexique383.tsv
+
+ENTRYPOINT ["/app/lexique3-api"]
